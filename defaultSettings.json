@@ -1,0 +1,121 @@
+[
+  {
+    "Tab": [
+      "Demographic Info",
+      {
+        "Entry": [
+          "Name",
+          ""
+        ]
+      },
+      {
+        "Entry": [
+          "Age",
+          ""
+        ]
+      },
+      {
+        "Entry": [
+          "Gender",
+          ""
+        ]
+      },
+      {
+        "Text": [
+          "Past History",
+          ""
+        ]
+      },
+      {
+        "Text": [
+          "Hisotry of Present Illness",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "Tab": [
+      "Daily Updates",
+      {
+        "Variable": [
+          "NumLabs",
+          "lab",
+          2
+        ]
+      },
+      {
+        "Variable": [
+          "NumImaging",
+          "imaging",
+          1
+        ]
+      },
+      {
+        "MultiField": [
+          "Lab Results",
+          "lab",
+          {
+            "Entry": [
+              "BMP in 24 hr",
+              ""
+            ]
+          },
+          {
+            "Entry": [
+              "Glucose in 24 hr",
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "MultiField": [
+          "Imaging Study",
+          "imaging",
+          {
+            "Entry": [
+              "Imaging Modality",
+              ""
+            ]
+          },
+          {
+            "Text": [
+              "Imaging Results",
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "Text": [
+          "Assesment Statement",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "Tab": [
+      "Plan",
+      {
+        "MultiField": [
+          "Plan",
+          "plan",
+          {
+            "Text": [
+              "Problem 1",
+              ""
+            ]
+          },
+          {
+            "Text": [
+              "Problem 2",
+              ""
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
