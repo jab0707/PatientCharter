@@ -1,170 +1,51 @@
 [
   {
     "tab": [
-      "demographicInfo",
+      "demographicinfo",
       {
         "entry": [
-          "Name",
-          "",
+          "name",
+          "Brian",
           ""
         ]
       },
       {
         "entry": [
-          "Age",
-          "",
+          "age",
+          "100",
           "years"
         ]
       },
       {
         "entry": [
-          "Gender",
-          "",
+          "gender",
+          "male",
           ""
         ]
       },
       {
         "text": [
-          "Past History",
-          "\n"
+          "pasthistory",
+          "overworking\n\n"
         ]
       },
       {
         "text": [
-          "Hisotry of Present Illness",
-          "\n"
+          "hisotryofpresentillness",
+          "stress and problems\n\n"
         ]
       }
     ]
   },
   {
     "tab": [
-      "dailyUpdates",
+      "dailyupdates",
       {
         "variable": [
           "labs",
-          4,
+          1,
           [
-            {
-              "multifield": [
-                "bmp1",
-                "lab",
-                {
-                  "entry": "Stuff1"
-                },
-                {
-                  "entry": "Stuff1"
-                }
-              ]
-            },
-            {
-              "multifield": [
-                "bmp2",
-                "lab",
-                {
-                  "entry": "Stuff2"
-                },
-                {
-                  "entry": "Stuff2"
-                }
-              ]
-            },
-            {
-              "multifield": [
-                "cmp3",
-                "lab",
-                {
-                  "entry": "Albumin3"
-                },
-                {
-                  "entry": "Alkaline3"
-                },
-                {
-                  "entry": "ALA3"
-                },
-                {
-                  "entry": "AST3"
-                },
-                {
-                  "entry": "BUN3"
-                },
-                {
-                  "entry": "Calcuium3"
-                },
-                {
-                  "entry": "Chloride3"
-                },
-                {
-                  "entry": "CO23"
-                },
-                {
-                  "entry": "Creatine3"
-                },
-                {
-                  "entry": "Glucose3"
-                },
-                {
-                  "entry": "Potassium3"
-                },
-                {
-                  "entry": "Sodium3"
-                },
-                {
-                  "entry": "Total Billirubin3"
-                },
-                {
-                  "entry": "Total Protein3"
-                }
-              ]
-            },
-            {
-              "multifield": [
-                "cmp4",
-                "lab",
-                {
-                  "entry": "Albumin4"
-                },
-                {
-                  "entry": "Alkaline4"
-                },
-                {
-                  "entry": "ALA4"
-                },
-                {
-                  "entry": "AST4"
-                },
-                {
-                  "entry": "BUN4"
-                },
-                {
-                  "entry": "Calcuium4"
-                },
-                {
-                  "entry": "Chloride4"
-                },
-                {
-                  "entry": "CO24"
-                },
-                {
-                  "entry": "Creatine4"
-                },
-                {
-                  "entry": "Glucose4"
-                },
-                {
-                  "entry": "Potassium4"
-                },
-                {
-                  "entry": "Sodium4"
-                },
-                {
-                  "entry": "Total Billirubin4"
-                },
-                {
-                  "entry": "Total Protein4"
-                }
-              ]
-            }
+            "cbc_1"
           ]
         ]
       },
@@ -177,271 +58,41 @@
       },
       {
         "multifield": [
-          "bmp1",
+          "cbc_1",
           "lab",
           {
             "entry": [
-              "Stuff1",
-              "",
-              ""
+              "rbc_1",
+              ".5",
+              "trillion cells/L"
             ]
           },
           {
             "entry": [
-              "Stuff1",
-              "",
-              ""
-            ]
-          }
-        ]
-      },
-      {
-        "multifield": [
-          "bmp2",
-          "lab",
-          {
-            "entry": [
-              "Stuff2",
-              "",
-              ""
+              "wbc_1",
+              ".5",
+              "billion cells/L"
             ]
           },
           {
             "entry": [
-              "Stuff2",
-              "",
-              ""
-            ]
-          }
-        ]
-      },
-      {
-        "multifield": [
-          "cmp3",
-          "lab",
-          {
-            "entry": [
-              "Albumin3",
-              "",
-              ""
+              "hemoglobin_1",
+              ".5",
+              "g/dL"
             ]
           },
           {
             "entry": [
-              "Alkaline3",
-              "",
-              ""
+              "hematocrit_1",
+              ".5",
+              "%"
             ]
           },
           {
             "entry": [
-              "ALA3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "AST3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "BUN3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Calcuium3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Chloride3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "CO23",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Creatine3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Glucose3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Potassium3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Sodium3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Total Billirubin3",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Total Protein3",
-              "",
-              ""
-            ]
-          }
-        ]
-      },
-      {
-        "multifield": [
-          "cmp4",
-          "lab",
-          {
-            "entry": [
-              "Albumin4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Alkaline4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "ALA4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "AST4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "BUN4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Calcuium4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Chloride4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "CO24",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Creatine4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Glucose4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Potassium4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Sodium4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Total Billirubin4",
-              "",
-              ""
-            ]
-          },
-          {
-            "entry": [
-              "Total Protein4",
-              "",
-              ""
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "tab": [
-      "plan",
-      {
-        "multifield": [
-          "Plan",
-          "plan",
-          {
-            "text": [
-              "Problem 1",
-              "\n"
-            ]
-          },
-          {
-            "text": [
-              "Problem 2",
-              "\n"
+              "platelet_1",
+              "2",
+              "billion/L"
             ]
           }
         ]

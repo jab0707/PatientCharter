@@ -334,7 +334,7 @@ class Patient_Presentation():
 	def printEvaluation(self):
 		self.EvaluationStatement.delete('1.0',tk.END)
 		if self.patientSettingsFile == '[]':
-			messagebox.showwarning('Warning', 'No patient print settings loaded\nEvaluation may not be printer correctly')
+			#messagebox.showwarning('Warning', 'No patient print settings loaded\nEvaluation may not be printer correctly')
 			self.printSettings = importSettings('baseSettings.py')
 		else:
 			self.printSettings = importSettings(self.patientSettingsFile)
