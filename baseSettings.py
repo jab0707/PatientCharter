@@ -5,21 +5,21 @@ from functools import reduce #magical function that makes recusive object/proper
 
 class basePrintSettings():
 	def __init__(self):
-		self.tabNameDictionary = {"demographicInfo":self.printDemographicInfo,
-								  "dailyUpdates":self.printDailyUpdates,
+		self.tabNameDictionary = {"demographic_Info":self.printDemographicInfo,
+								  "daily_Updates":self.printDailyUpdates,
 								  "plan":self.printPlan}
 
 	def printDemographicInfo(self,patient):
-		name = patient.demographicInfo.name.get()
-		age = patient.demographicInfo.age.get()
-		gender = patient.demographicInfo.gender.get()
-		pastHistory = patient.demographicInfo.pastHistory.get('1.0',tk.END)
-		hisotryOfPresentIllness = patient.demographicInfo.hisotryOfPresentIllness.get('1.0',tk.END)
-		useName = 1 if patient.demographicInfo.name.isRelevant.get() == 1 else 0
-		useAge = 1 if patient.demographicInfo.age.isRelevant.get() == 1 else 0
-		useGender = 1 if patient.demographicInfo.gender.isRelevant.get() == 1 else 0
-		usePastHistory = 1 if patient.demographicInfo.pastHistory.isRelevant.get() == 1 else 0
-		usePresentHistory = 1 if patient.demographicInfo.hisotryOfPresentIllness.isRelevant.get() == 1 else 0
+		name = patient.demographic_Info.name.get()
+		age = patient.demographic_Info.age.get()
+		gender = patient.demographic_Info.gender.get()
+		pastHistory = patient.demographic_Info.past_History.get('1.0',tk.END)
+		hisotryOfPresentIllness = patient.demographic_Info.hisotry_Of_Present_Illness.get('1.0',tk.END)
+		useName = 1 if patient.demographic_Info.name.isRelevant.get() == 1 else 0
+		useAge = 1 if patient.demographic_Info.age.isRelevant.get() == 1 else 0
+		useGender = 1 if patient.demographic_Info.gender.isRelevant.get() == 1 else 0
+		usePastHistory = 1 if patient.demographic_Info.past_History.isRelevant.get() == 1 else 0
+		usePresentHistory = 1 if patient.demographic_Info.hisotry_Of_Present_Illness.isRelevant.get() == 1 else 0
 
 		demographicInfoString = ''
 
@@ -46,13 +46,13 @@ class basePrintSettings():
 		return demographicInfoString
 
 	def printDailyUpdates(self,patient):
-		labNames = patient.dailyUpdates.labs.names
+		labNames = patient.daily_Updates.labs.names
 		dailyUpdateString = ''
-		if patient.dailyUpdates.tabIsRelevant.get():
+		if patient.daily_Updates.tabIsRelevant.get():
 
 			for lab in labNames:
 				
-				if getattr(patient.dailyUpdates,lab).isRelevant.get():
+				if getattr(patient.daily_Updates,lab).isRelevant.get():
 					dailyUpdateString = dailyUpdateString + getLab(patient,lab)
 				pass
 		
@@ -112,17 +112,17 @@ def printCBC(labVals,relevantFlags,labStruct):
 		output += f'\n Platelet count of {pullLabVals(labVals,labUnits,valueIndex)}'
 		output += checkValueAgainstStandard(labVals[valueIndex],defaultValues[valueIndex])
 	if output != '':
-		output = 'CBC lab results:\n' + output
+		output = '\nCBC lab results:' + output
 	return output
 
 
 cbcLab = lab(entries = ['rbc','wbc','hemoglobin','hematocrit','platelet'],
 			structure= {'multifield':['cbc','lab',
-							  {'entry':['RBC','','trillion cells/L']},
-							  {'entry':['WBC','','billion cells/L']},
-							  {'entry':['Hemoglobin','','g/dL']},
-							  {'entry':['Hematocrit','','%']},
-							  {'entry':['Platelet','','billion/L']}
+							  {'entry':['RBC','0','trillion cells/L']},
+							  {'entry':['WBC','0','billion cells/L']},
+							  {'entry':['Hemoglobin','0','g/dL']},
+							  {'entry':['Hematocrit','0','%']},
+							  {'entry':['Platelet','0','billion/L']}
 							  ]},
 			defaultRanges=[[0,1],[0,1],[0,1],[0,1],[0,1]],
 			printer=printCBC)
@@ -187,27 +187,27 @@ def printCMP(labVals,relevantFlags,labStruct):
 		output += f'\n Total protein of {pullLabVals(labVals,labUnits,valueIndex)}'
 		output += checkValueAgainstStandard(labVals[valueIndex],defaultValues[valueIndex])
 	if output != '':
-		output = 'CMP lab results:\n' + output
+		output = '\nCMP lab results:' + output
 	return output
 
 cmpLab = lab(entries = ['albumin','alkaline','ala','ast','bun',\
 						'calcuium','chloride','co2','creatine',	'glucose',\
-						'potassium','sodium','totalBillirubin','totalProtein'],
+						'potassium','sodium','total_Billirubin','total_Protein'],
 			structure= {'multifield':['cmp','lab',
-							{'entry':['Albumin','','']},
-							{'entry':['Alkaline','','']},
-							{'entry':['ALA','','']},
-							{'entry':['AST','','']},
-							{'entry':['BUN','','']},
-							{'entry':['Calcuium','','']},
-							{'entry':['Chloride','','']},
-							{'entry':['CO2','','']},
-							{'entry':['Creatine','','']},
-							{'entry':['Glucose','','']},
-							{'entry':['Potassium','','']},
-							{'entry':['Sodium','','']},
-							{'entry':['Total Billirubin','','']},
-							{'entry':['Total Protein','','']},
+							{'entry':['Albumin','0','']},
+							{'entry':['Alkaline','0','']},
+							{'entry':['ALA','0','']},
+							{'entry':['AST','0','']},
+							{'entry':['BUN','0','']},
+							{'entry':['Calcuium','0','']},
+							{'entry':['Chloride','0','']},
+							{'entry':['CO2','0','']},
+							{'entry':['Creatine','0','']},
+							{'entry':['Glucose','0','']},
+							{'entry':['Potassium','0','']},
+							{'entry':['Sodium','0','']},
+							{'entry':['Total Billirubin','0','']},
+							{'entry':['Total Protein','0','']},
 							]},
 			defaultRanges=[[0,1],[0,1],[0,1],[0,1],
 							[0,1],[0,1],[0,1],[0,1],
@@ -219,8 +219,8 @@ def printBMP(bmpValues,defaultValues,relevantFlags):
 	return ''
 bmpLab = lab(entries = ['stuff1','stuff2'],
 			structure= {'multifield':['bmp','lab',
-							  {'entry':['Stuff1','','']},
-							  {'entry':['Stuff2','','']}
+							  {'entry':['Stuff1','0','']},
+							  {'entry':['Stuff2','0','']}
 							  ]},
 			defaultRanges=[[0,1],[0,1]],
 			printer=printBMP)
@@ -236,8 +236,8 @@ def getLab(patient,labFullName):
 	relevantFlags = []
 	labName,labNumber = labFullName.split('_')
 	for entry in _labDict[labName].entries:
-		values.append(getattr(patient.dailyUpdates,entry + f"_{labNumber}").get())
-		relevantFlags.append(reduce(getattr,['dailyUpdates',entry + f"_{labNumber}",'isRelevant'],patient).get())
+		values.append(getattr(patient.daily_Updates,entry + f"_{labNumber}").get())
+		relevantFlags.append(reduce(getattr,['daily_Updates',entry + f"_{labNumber}",'isRelevant'],patient).get())
 		
 	##implement calling the right print statement
 	return _labDict[labName].printer(values,relevantFlags,_labDict[labName])
@@ -246,9 +246,9 @@ def getLab(patient,labFullName):
 def addLab(patient,labName):			
 	
 
-	patient.dailyUpdates.labs.number = patient.dailyUpdates.labs.number + 1
+	patient.daily_Updates.labs.number = patient.daily_Updates.labs.number + 1
 	#Check if any of the existing labs share a name with this one
-	sameLabs = [oldLabName for oldLabName in patient.dailyUpdates.labs.names if labName in oldLabName]
+	sameLabs = [oldLabName for oldLabName in patient.daily_Updates.labs.names if labName in oldLabName]
 	#if they do, update the number of the current lab
 	labNum =1
 	if sameLabs:
@@ -256,9 +256,9 @@ def addLab(patient,labName):
 			oldNum = int(oldLab.split('_')[1])
 			if oldNum >= labNum:
 				labNum = oldNum + 1
-	addedField = patient.dailyUpdates.addField(_labDict[labName].structure, "_" + str(labNum))
-	patient.dailyUpdates.labs.names.append(labName + '_' + str(labNum))
-	patient.dailyUpdates.fields.append(addedField)
+	addedField = patient.daily_Updates.addField(_labDict[labName].structure, "_" + str(labNum))
+	patient.daily_Updates.labs.names.append(labName + '_' + str(labNum))
+	patient.daily_Updates.fields.append(addedField)
 
 def addImaging(patient):
 	pass

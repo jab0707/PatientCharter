@@ -7,7 +7,7 @@ from functools import reduce #magical function that makes recusive object/proper
 import os
 import importlib.util
 import baseSettings as charterSettings
-
+import re
 '''
 Generic
 -hotkeys for adding labvs and navigating
@@ -60,11 +60,11 @@ def importSettings(file):
 
 
 def formatAttributeName(attributeStr):
-	nameList = attributeStr.split()
+	nameList = re.split(' |_',attributeStr)
 	formattedName = ''
 	for strIx in range(len(nameList)):
 		if strIx > 0:
-			formattedName = formattedName+nameList[strIx].capitalize()
+			formattedName = formattedName+'_'+nameList[strIx].capitalize()
 		else:
 			formattedName = formattedName+nameList[strIx].lower()
 	return formattedName
@@ -266,7 +266,7 @@ class Patient_Presentation():
 			else:
 				fieldsWithoutTabs.append(field)
 		if len(fieldsWithoutTabs) > 0:
-				tabName = 'MiscPatientInfo'
+				tabName = 'misc_Patient_Info'
 				setattr(self,tabName,Patient_Tab(self.individualTabController,tabName,fieldsWithoutTabs))
 				self.subTabs.append(tabName)
 		
@@ -384,7 +384,7 @@ def LoadPatient():
 def AddLab(labName):
 	currentPatientTab = patientTabController.index(patientTabController.select())
 	currentPatient = patientList[currentPatientTab]
-	currentPatient.dailyUpdates.fixScroll
+	currentPatient.daily_Updates.fixScroll
 	charterSettings.addLab(currentPatient,labName)
 def AddImaging():
 	currentPatientTab = patientTabController.index(patientTabController.select())
